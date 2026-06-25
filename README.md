@@ -229,25 +229,14 @@ project/
 
 ## 协同架构
 
-```
-┌──────────┐    HTTP REST (JWT)     ┌──────────────┐
-│  用户 A   │ ◄───────────────────► │              │
-│ (浏览器)  │                        │  Spring Boot │
-└──────────┘    WebSocket/STOMP     │   Server     │
-     │         ◄───────────────────► │              │
-     │  /app/canvas/{id}/draw        └──────┬───────┘
-     │  /topic/canvas/{id} (订阅)           │
-     │                              ┌──────┴───────┐
-┌──────────┐    WebSocket/STOMP     │   MySQL      │
-│  用户 B   │ ◄───────────────────► │  (JPA/Hibenate)
-│ (浏览器)  │                        │              │
-└──────────┘                        └──────────────┘
+用户 A（浏览器）与用户 B（浏览器）分别通过 HTTP REST（JWT 认证）和 WebSocket/STOMP 连接到 Spring Boot Server，Server 通过 JPA/Hibernate 持久化数据到 MySQL。
 
-1. 用户 A 操作画布 → 发送 STOMP 消息到 /app/canvas/{id}/draw
-2. 服务端验证 JWT → 广播到 /topic/canvas/{id}
-3. 用户 B 订阅同一房间 → 收到消息 → 更新画布
-4. 关键操作由前端调用 REST API 持久化到 MySQL
-```
+消息流转：
+
+1. 用户 A 操作画布，通过 STOMP 发送消息到 `/app/canvas/{id}/draw`
+2. 服务端验证 JWT 后，将消息广播到 `/topic/canvas/{id}`
+3. 订阅同一房间的用户 B 收到消息并更新画布
+4. 关键操作（保存、新建等）由前端通过 REST API 持久化到 MySQL
 
 ---
 
