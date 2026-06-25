@@ -1,0 +1,23 @@
+# ================================
+# 矢量图形编辑器 — Root .gitignore
+# ================================
+
+# --- Zip archives (not tracked) ---
+*.zip
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- IDE ---
+.idea/
+*.iml
+.vscode/
+
+# --- Claude / Workbuddy ---
+.claude/
+.workbuddy/
+
+# --- Environment config (contains deployment URLs) ---
+.env

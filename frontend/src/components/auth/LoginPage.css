@@ -1,0 +1,156 @@
+.login-bg {
+  min-height: 100vh;
+  background: #0e0e1c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: #16162a;
+  border: 1px solid #2a2a3e;
+  border-radius: 16px;
+  padding: 36px 40px 32px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Logo */
+.login-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.login-logo-icon { font-size: 32px; }
+
+.login-logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Tab 切换 */
+.login-tabs {
+  display: flex;
+  background: #0f0f1e;
+  border-radius: 8px;
+  padding: 3px;
+  margin-bottom: 20px;
+}
+
+.login-tab {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  background: transparent;
+  color: #888;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.login-tab--active {
+  background: #5b6ef5;
+  color: #fff;
+}
+
+/* 错误提示 */
+.login-error {
+  background: rgba(255, 70, 70, 0.12);
+  border: 1px solid rgba(255, 70, 70, 0.3);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: #ff7875;
+  margin-bottom: 16px;
+}
+
+/* 表单 */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.login-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.login-field label {
+  font-size: 12px;
+  color: #888;
+  font-weight: 500;
+}
+
+.required { color: #ff7875; }
+
+.login-field input {
+  padding: 10px 13px;
+  background: #0f0f1e;
+  border: 1px solid #2a2a3e;
+  border-radius: 8px;
+  color: #eee;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.login-field input:focus {
+  border-color: #5b6ef5;
+}
+
+.login-field input::placeholder {
+  color: #444;
+}
+
+/* 提交按钮 */
+.login-submit {
+  margin-top: 4px;
+  padding: 11px;
+  background: #5b6ef5;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+  letter-spacing: 2px;
+}
+
+.login-submit:hover:not(:disabled) {
+  background: #6d7ff6;
+  transform: translateY(-1px);
+}
+
+.login-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* 切换提示 */
+.login-switch {
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  margin-top: 2px;
+}
+
+.login-switch span {
+  color: #5b6ef5;
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+.login-switch span:hover {
+  text-decoration: underline;
+}

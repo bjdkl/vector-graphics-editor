@@ -1,0 +1,160 @@
+.property-panel {
+  width: 240px;
+  min-width: 240px;
+  background: #1e1e2e;
+  border-left: 1px solid #333;
+  overflow-y: auto;
+  height: 100%;
+  color: #ccc;
+  font-size: 12px;
+}
+
+.panel-header {
+  padding: 12px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  background: #2a2a3e;
+  border-bottom: 1px solid #333;
+}
+
+.prop-section {
+  padding: 8px 12px;
+  border-bottom: 1px solid #2a2a3e;
+}
+
+.prop-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  margin-top: 4px;
+}
+
+.prop-title-sm {
+  font-size: 10px;
+  margin-top: 12px;
+}
+
+.prop-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  gap: 8px;
+}
+
+.prop-label {
+  width: 60px;
+  min-width: 60px;
+  color: #aaa;
+  font-size: 11px;
+}
+
+.prop-value {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.prop-input {
+  width: 100%;
+  background: #12121e;
+  border: 1px solid #444;
+  border-radius: 4px;
+  color: #eee;
+  padding: 3px 6px;
+  font-size: 12px;
+  outline: none;
+}
+
+.prop-input:focus {
+  border-color: #1677ff;
+}
+
+.prop-select {
+  width: 100%;
+  background: #12121e;
+  border: 1px solid #444;
+  border-radius: 4px;
+  color: #eee;
+  padding: 3px 6px;
+  font-size: 12px;
+  outline: none;
+  cursor: pointer;
+}
+
+.prop-textarea {
+  width: 100%;
+  background: #12121e;
+  border: 1px solid #444;
+  border-radius: 4px;
+  color: #eee;
+  padding: 4px 6px;
+  font-size: 12px;
+  outline: none;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.prop-textarea:focus {
+  border-color: #1677ff;
+}
+
+.prop-color {
+  width: 28px;
+  height: 24px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 0;
+  background: none;
+}
+
+.prop-color-text {
+  font-size: 11px;
+  color: #aaa;
+  font-family: monospace;
+}
+
+.prop-color-text.muted {
+  font-style: italic;
+  color: #666;
+}
+
+.prop-clear-btn {
+  background: transparent;
+  border: 1px solid #555;
+  border-radius: 3px;
+  color: #aaa;
+  cursor: pointer;
+  padding: 1px 5px;
+  font-size: 10px;
+}
+
+.prop-clear-btn:hover {
+  background: #444;
+  color: #fff;
+}
+
+.prop-text {
+  color: #aaa;
+  font-size: 11px;
+  word-break: break-all;
+}
+
+.prop-empty {
+  color: #666;
+  font-size: 12px;
+  text-align: center;
+  padding: 16px 8px;
+  line-height: 1.6;
+}
+
+.hint {
+  font-size: 11px;
+  color: #555;
+  line-height: 1.8;
+}
