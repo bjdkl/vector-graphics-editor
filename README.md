@@ -90,7 +90,7 @@ mysql -u root -p < backend/sql/schema.sql
 编辑 `backend/src/main/resources/application.properties`：
 
 ```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/vectoreditor?...
+spring.datasource.url=jdbc:mysql://***:3306/vectoreditor?...
 spring.datasource.username=你的用户名
 spring.datasource.password=你的密码
 ```
